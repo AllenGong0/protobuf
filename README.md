@@ -2,6 +2,7 @@
 # protobuf code generate
 ### protobuf
 推荐指数：*
+
 注：protoc 即 protobuf cli
 
 protobuf 本身并未对 ts js 有支持，需要通过插件实现
@@ -45,6 +46,7 @@ protoc --plugin=./node_modules/.bin/protoc-gen-js ./proto/example.proto --js_out
 
 ### buf
 推荐指数：*****
+
 https://buf.build/docs/
 
 通过配置 yaml 生成不同平台文件
@@ -100,7 +102,9 @@ console.log(fromBinary(MyMessageSchema, bytes, { readUnknownFields: false }));
 
 ## pbjs
 注：高版本只能生成 js/ts 文件
+
 推荐指数：***
+
 protobuf version 6.11.3
 
 安装
