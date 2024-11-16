@@ -1,0 +1,6 @@
+version: v2
+clean: true
+plugins:
+  # - remote: buf.build/bufbuild/es:v2.2.2
+  - local: protoc-gen-es 
+    out: gen

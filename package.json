@@ -1,0 +1,24 @@
+{
+  "name": "protobuf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buf:generate": "npx buf generate",
+    "protoc:ts": "protoc --plugin=./node_modules/.bin/protoc-gen-ts ./proto/example.proto --ts_proto_out=dist",
+    "protoc:js": "protoc --plugin=./node_modules/.bin/protoc-gen-js ./proto/example.proto --js_out=dist",
+    "gen:pbjs": "npx pbjs -t static-module -w commonjs -o dist/example_pb.js ./proto/example.proto",
+    "gen:pbts": "npx pbts -o dist/example_pb.d.ts dist/example_pb.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.2.2"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.47.2",
+    "@bufbuild/protoc-gen-es": "^2.2.2",
+    "protoc-gen-ts": "^0.8.7"
+  }
+}
